@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'intern-project';
-}
+  title = 'Intern Stock Picks';
+  stockArray = [];
+
+  addTodo(value){    
+    this.stockArray.push(value)    
+    console.log(value) } 
+  }
+  
