@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Intern Stock Picks';
+  subtitle = 'RCG Summer Intern Portfolio 2020';
   stockArray = [];
 
-  addTodo(value){    
-    this.stockArray.push(value)    
-    console.log(value) } 
+  addTodo(value){
+    this.stockArray.push(value)
+    console.log(value) }
   }
-  

@@ -1,0 +1,11 @@
+<div *ngIf="stock">
+
+  <h2 style="color:#1588F3;">{{stock.ticker | uppercase}} information</h2>
+  <div><span>price: </span>{{stock.price}}</div>
+  <div>
+    <span>company: </span>{{stock.company}}
+  </div>
+  <div><span>Market Cap: </span>{{stock.marketCap}}B</div>
+  <div><span>P/E Ratio: </span>{{stock.peRatio}}</div>
+  <div> <a href="https://finance.yahoo.com/quote/{{stock.ticker}}">find more information here</a>
+</div>

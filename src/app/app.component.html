@@ -2,9 +2,10 @@
     <h1 class="text-center text-primary">{{title}}</h1>
     <body>
     </body>
-<div class="container"> <form>  <div class="form-group">   
+<div class="container"> <form>  <div class="form-group">
 <input type="text" #stock class="form-control" placeholder="ex. TSLA" name="stock ngModel">
 <span class="input-group-text" (click)="addTodo(stock.value)">Add</span>
 <div class="input-group-prepend"><span class="input-group-text">Add</span></div>  </div> </form></div>
 <div class="data">  <ul class="list-instyled">   <li *ngFor="let stock of stockArray">{{stock}}</li>  </ul>  </div>
 </html>
+<app-stocks></app-stocks>
