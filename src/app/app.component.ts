@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Intern Stock Picks';
   subtitle = 'RCG Summer Intern Portfolio 2020';
+  authors = 'Anna Faliero and Sara Abdali';
   stockArray = [];
 
   addTodo(value){    

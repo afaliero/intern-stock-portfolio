@@ -32,6 +32,11 @@ body {
 input:focus {
     outline: white;
 }
+.address {
+    bottom: auto;
+    color: white;
+    text-align: center;
+}
 
 
 
