@@ -20,7 +20,7 @@ export var STOCKS: Stock[] = [
   peRatio: 0
   },
   {ticker: 'LUV',
-  price: 0,
+  price: 35.00,
   company: 'Southwest Airlines Co.',
   rank: 0,
   returns: 0,

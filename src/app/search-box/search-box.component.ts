@@ -21,7 +21,7 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
       company: "X",
       rank: 0,
       returns: 0,
-      june15: 0,
+      june15: 100000,
       marketCap: 0,
       peRatio: 0,
     })
