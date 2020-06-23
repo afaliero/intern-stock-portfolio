@@ -21,7 +21,7 @@ export class StocksComponent implements OnInit {
 
   getRank() {
     for(var i = 0; i < this.stocks.length; i++) {
-      this.stocks[i].rank = i;
+      this.stocks[i].rank = i + 1;
     }
   }
 
