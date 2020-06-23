@@ -11,9 +11,18 @@ import { STOCKS } from '../mock-stocks';
 export class StocksComponent implements OnInit {
   stocks = STOCKS;
   selectedStock: Stock;
-  constructor() { }
+
+  constructor() {
+    this.getRank();
+   }
 
   ngOnInit(): void {
+  }
+
+  getRank() {
+    for(var i = 0; i < this.stocks.length; i++) {
+      this.stocks[i].rank = i;
+    }
   }
 
   onSelect(stock: Stock): void {
