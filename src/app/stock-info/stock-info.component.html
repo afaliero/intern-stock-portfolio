@@ -4,7 +4,7 @@
     <div class="background" style="background-color:rgba(0, 255, 0, 0.5)">
     <div class="info">
       <h2 style="color:white;">{{stock.company}}</h2>
-     <div><span>Price: </span>{{stock.price}}</div>
+     <div><span>Price: </span>${{stock.price}}</div>
      <div><span>Total Gain: </span>{{stock.returns}}%</div>
      <div><span>Company: </span>{{stock.company}}</div>
      <div><span>Market Cap: </span>{{stock.marketCap}}B</div>
@@ -19,7 +19,7 @@
     <div class="background" style="background-color: rgba(255, 0, 0, 0.5)">
    <div class="info">
      <h2 style="color:white;">{{stock.company}}</h2>
-    <div><span>Price: </span>{{stock.price}}</div>
+    <div><span>Price: </span>${{stock.price}}</div>
     <div><span>Total Loss: </span>{{stock.returns}}%</div>
     <div><span>Company: </span>{{stock.company}}</div>
     <div><span>Market Cap: </span>{{stock.marketCap}}B</div>
