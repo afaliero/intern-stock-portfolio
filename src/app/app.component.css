@@ -21,7 +21,7 @@ h2 {
     color: 	#D3D3D3;
     padding-bottom: 1em;
 }
-body { 
+body {
     align-items: center;
     margin: auto;
     background-color: transparent;
@@ -32,12 +32,3 @@ body {
 input:focus {
     outline: white;
 }
-.address {
-    bottom: auto;
-    color: white;
-    text-align: center;
-}
-
-
-
-  

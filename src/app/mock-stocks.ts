@@ -1,4 +1,4 @@
-import { Stock } from './stock';
+import { Stock } from '../stock';
 
 export const STOCKS: Stock[] = [
   {ticker: 'SQ',

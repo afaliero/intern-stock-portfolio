@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Stock } from '../stock';
-import { STOCKS } from './mock-stocks';
+import { STOCKS } from '../mock-stocks';
 
 
 @Component({
