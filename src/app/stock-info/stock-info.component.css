@@ -1,0 +1,8 @@
+.background {
+  padding: 20px;
+  border-radius: 4px;
+  background-color: red;
+}
+.background .info{
+  color: white;
+}
