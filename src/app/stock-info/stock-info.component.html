@@ -1,27 +1,28 @@
 <div *ngIf="stock">
 
-
-  <ng-template [ngIf]= "stock.returns >= 0 "> <div class="background" style="background-color:rgba(0, 255, 0, 0.5)">
+  <ng-template [ngIf]= "stock.returns >= 0" [ngIfElse]="posReturns"> 
+    <div class="background" style="background-color:rgba(0, 255, 0, 0.5)">
     <div class="info">
       <h2 style="color:white;">{{stock.ticker | uppercase}} information</h2>
      <div><span>price: </span>{{stock.price}}</div>
      <div><span>company: </span>{{stock.company}}</div>
      <div><span>Market Cap: </span>{{stock.marketCap}}B</div>
      <div><span>P/E Ratio: </span>{{stock.peRatio}}</div>
-     <div style="color: red;"> <a href="https://finance.yahoo.com/quote/{{stock.ticker}}">Find more information here</a>
+     <div> <a href="https://finance.yahoo.com/quote/{{stock.ticker}}">Find more information here</a>
     </div>
     </div>
     </div>
     </ng-template>
  
- <ng-template [ngIf]= "stock.returns < 0"> <div class="background" style="background-color: rgba(255, 0, 0, 0.5)">
+ <ng-template [ngIf]= "stock.returns < 0">
+    <div class="background" style="background-color: rgba(255, 0, 0, 0.5)">
    <div class="info">
      <h2 style="color:white;">{{stock.ticker | uppercase}} information</h2>
     <div><span>price: </span>{{stock.price}}</div>
     <div><span>company: </span>{{stock.company}}</div>
     <div><span>Market Cap: </span>{{stock.marketCap}}B</div>
     <div><span>P/E Ratio: </span>{{stock.peRatio}}</div>
-    <div style="color = "> <a href="https://finance.yahoo.com/quote/{{stock.ticker}}">find more information here</a>
+    <div> <a href="https://finance.yahoo.com/quote/{{stock.ticker}}">find more information here</a>
    </div>
  </div>
  </div>

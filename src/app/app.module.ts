@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { ChartComponent } from './chart/chart.component';
 import { StocksComponent } from './stocks/stocks.component';
 import { StockInfoComponent } from './stock-info/stock-info.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     //ChartComponent,
     StocksComponent,
-    StockInfoComponent
+    StockInfoComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,

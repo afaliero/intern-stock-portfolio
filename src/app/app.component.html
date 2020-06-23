@@ -6,12 +6,9 @@
     <h1>{{title}}</h1>
     <h2>{{subtitle}}</h2>
             <body>
-                <div class="container"> <form>  <div class="form-group">
-                    <input type="text" #stock class="form-control" placeholder="Enter a symbol (ex. TSLA)" name="stock ngModel">
-                    <span class="input-group-text" (click)="addTodo(stock.value)">Get data</span>
-                    </div> </form></div>
+                <app-search-box></app-search-box>
+                 <app-stocks></app-stocks>
          </body>
-         <app-stocks></app-stocks>
         </div>
     </div>
 </html>
