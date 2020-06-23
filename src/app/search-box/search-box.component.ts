@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-box.component.css']
 })
 export class SearchBoxComponent implements OnInit {
-
-  constructor() { }
+  stockArray = [];
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
+
+  addTodo(value) {    
+    this.stockArray.push(value)    
+    console.log(value) } 
 
 }

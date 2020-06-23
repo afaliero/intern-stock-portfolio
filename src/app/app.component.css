@@ -32,6 +32,3 @@ body {
 input:focus {
     outline: white;
 }
-.stockContainer {
-    position: relative;
-}
