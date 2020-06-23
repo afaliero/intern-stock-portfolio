@@ -2,20 +2,20 @@ import { Stock } from './stock';
 
 export var STOCKS: Stock[] = [
   {ticker: 'SQ',
-  price: 97,
+  price: 0,
   company: 'Square Inc.',
   rank: 0,
   returns: 0,
-  rise: true,
+  june15: 91.00,
   marketCap: 45.95,
   peRatio: 157
   },
-  {ticker: 'VISA',
+  {ticker: 'V',
   price: 0,
   company: 'Visa Inc.',
   rank: 3,
   returns: 0,
-  rise: true,
+  june15: 191.76,
   marketCap: 0,
   peRatio: 0
   },
@@ -24,7 +24,7 @@ export var STOCKS: Stock[] = [
   company: 'Southwest Airlines Co.',
   rank: 0,
   returns: 0,
-  rise: true,
+  june15: 36.34,
   marketCap: 0,
   peRatio: 0
   },
@@ -33,7 +33,7 @@ export var STOCKS: Stock[] = [
   company: 'Laureate Education Inc.',
   rank: 3,
   returns: 0,
-  rise: true,
+  june15: 10.15,
   marketCap: 0,
   peRatio: 0
   },
@@ -42,7 +42,7 @@ export var STOCKS: Stock[] = [
   company: 'Omnicom Group Inc.',
   rank: 3,
   returns: 0,
-  rise: true,
+  june15: 56.32,
   marketCap: 0,
   peRatio: 0
   },
@@ -51,16 +51,7 @@ export var STOCKS: Stock[] = [
   company: 'Apple Inc.',
   rank: 3,
   returns: 0,
-  rise: true,
-  marketCap: 0,
-  peRatio: 0
-  },
-  {ticker: 'VISA',
-  price: 0,
-  company: 'Visa',
-  rank: 3,
-  returns: 0,
-  rise: true,
+  june15: 342.99,
   marketCap: 0,
   peRatio: 0
   },
@@ -69,7 +60,7 @@ export var STOCKS: Stock[] = [
   company: 'The Cheesecake Factory Inc.',
   rank: 3,
   returns: 0,
-  rise: true,
+  june15: 25.13,
   marketCap: 0,
   peRatio: 0
   },
@@ -78,7 +69,7 @@ export var STOCKS: Stock[] = [
   company: 'AmerisourceBergen Corp.',
   rank: 3,
   returns: 0,
-  rise: true,
+  june15: 96.21,
   marketCap: 0,
   peRatio: 0
   },
@@ -87,16 +78,7 @@ export var STOCKS: Stock[] = [
   company: 'Palo Alto Networks Inc.',
   rank: 3,
   returns: 0,
-  rise: true,
-  marketCap: 0,
-  peRatio: 0
-  },
-  {ticker: 'VISA',
-  price: 0,
-  company: 'Visa',
-  rank: 3,
-  returns: 0,
-  rise: true,
+  june15: 226.30,
   marketCap: 0,
   peRatio: 0
   },
@@ -105,16 +87,7 @@ export var STOCKS: Stock[] = [
   company: 'Revolve Group LLC.',
   rank: 3,
   returns: 0,
-  rise: true,
-  marketCap: 0,
-  peRatio: 0
-  },
-  {ticker: 'VISA',
-  price: 0,
-  company: 'Visa',
-  rank: 3,
-  returns: 0,
-  rise: true,
+  june15: 15.32,
   marketCap: 0,
   peRatio: 0
   },
@@ -123,7 +96,7 @@ export var STOCKS: Stock[] = [
   company: 'Zoom Video Communications Inc.',
   rank: 3,
   returns: 0,
-  rise: true,
+  june15: 239.02,
   marketCap: 0,
   peRatio: 0
   },
@@ -132,7 +105,7 @@ export var STOCKS: Stock[] = [
   company: 'Wayfair Inc.',
   rank: 3,
   returns: 0,
-  rise: true,
+  june15: 193.19,
   marketCap: 0,
   peRatio: 0
   },
@@ -141,7 +114,7 @@ export var STOCKS: Stock[] = [
   company: 'Spotify Technology S.A.',
   rank: 3,
   returns: 0,
-  rise: true,
+  june15: 187.88,
   marketCap: 0,
   peRatio: 0
   },
@@ -150,7 +123,7 @@ export var STOCKS: Stock[] = [
   company: 'XpresSpa Group, Inc.',
   rank: 3,
   returns: 0,
-  rise: true,
+  june15: 5.50,
   marketCap: 0,
   peRatio: 0
   }

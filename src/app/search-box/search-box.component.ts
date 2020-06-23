@@ -10,7 +10,7 @@ import { StocksComponent } from '../stocks/stocks.component';
 })
 
 export class SearchBoxComponent extends StocksComponent implements OnInit {
-  
+
   ngOnInit(): void {
   }
 
@@ -21,11 +21,11 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
       company: "X",
       rank: 0,
       returns: 0,
-      rise: true,
+      june15: 0,
       marketCap: 0,
       peRatio: 0,
     })
-    this.getRank();
+    this.setRank();
     console.log(value);
   } 
 

@@ -3,8 +3,8 @@
     border-radius: 4px;
     width: 300pt;
     text-align: left;
-    position: right;
+    position: relative; 
   }
-  .info{
+  .background.info{
     color: white;
   }

@@ -13,18 +13,17 @@ export class StocksComponent implements OnInit {
   selectedStock: Stock;
 
   constructor() {
-    this.getRank();
+    this.setRank();
    }
-
   ngOnInit(): void {
   }
-
-  getRank() {
+  setRank() {
     for(var i = 0; i < this.stocks.length; i++) {
-      this.stocks[i].rank = i + 1;
+      var x = this.stocks[i];
+      x.rank = i + 1;
+      x.returns = (x.price - x.june15)/ x.june15 * 100;
     }
   }
-
   onSelect(stock: Stock): void {
     this.selectedStock = stock;
   }
