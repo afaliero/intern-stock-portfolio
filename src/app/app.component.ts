@@ -11,8 +11,9 @@ export class AppComponent {
   authors = 'Anna Faliero and Sara Abdali';
   stockArray = [];
 
-  addTodo(value){    
+  addTodo(value) {    
     this.stockArray.push(value)    
     console.log(value) } 
+
   }
   

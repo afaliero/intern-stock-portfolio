@@ -1,8 +1,8 @@
-import { Stock } from '../stock';
+import { Stock } from './stock';
 
 export const STOCKS: Stock[] = [
   {ticker: 'SQ',
-	price: 97,
+	price: "$97",
   company: 'Square',
   rank: 1,
   returns: +1.3,
@@ -11,7 +11,7 @@ export const STOCKS: Stock[] = [
   peRatio: 157
   },
   {ticker: 'GOOGL',
-	price: 1400,
+	price: "$1400",
   company: 'Alphabet Inc.',
   rank: 2,
   returns: -1.4,
