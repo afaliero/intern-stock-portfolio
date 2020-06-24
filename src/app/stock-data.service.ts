@@ -15,11 +15,9 @@ export class StockDataService {
     constructor() {
     }
 
-    callApi() {
-      return finnhubClient.quote("AAPL", (error, data, response) => {
-        console.log(data.c);
-        return data.c;
+    callApi(index: number): void {
+      finnhubClient.quote(STOCKS[index].ticker, (error, data, response) => {
+        STOCKS[index].price = data.c;
       })
-
     }
-  }
+}

@@ -17,11 +17,12 @@ export class StocksComponent implements OnInit {
   selectedStock: Stock;
 
   constructor(private stockApi: StockDataService) {
+    this.updateStockArray();
    }
 
   ngOnInit(): void {
-    console.log(this.stockApi.callApi());
   }
+
   onSelect(stock: Stock): void {
     this.selectedStock = stock;
   }
@@ -38,6 +39,7 @@ export class StocksComponent implements OnInit {
    */
   setReturns() {
     for(var i = 0; i < this.stocks.length; i++) {
+      this.stockApi.callApi(i);
       var x = this.stocks[i];
       var res = (x.price - x.june15) / x.june15 * 100;
       x.returns = this.round(res, 2);

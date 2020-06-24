@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { StockDataService } from './stock-data.service';
 import { HttpClient } from '@angular/common/http';
+import { StocksComponent } from './stocks/stocks.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   authors = 'Anna Faliero and Sara Abdali';
 
   constructor() {
-    new StockDataService();
+    new StocksComponent(new StockDataService);
   }
 
   }
