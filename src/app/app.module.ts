@@ -10,6 +10,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
 import { StockDataService } from './stock-data.service';
 
 @NgModule({
+
   declarations: [
     AppComponent,
     StocksComponent,

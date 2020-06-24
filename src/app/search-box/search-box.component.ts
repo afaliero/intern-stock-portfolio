@@ -19,14 +19,12 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
       ticker: value,
       price: 0,
       company: "X",
-      rank: 0,
       returns: 0,
       june15: 100000,
       marketCap: 0,
       peRatio: 0,
     })
     this.updateStockArray();
-    console.log(value);
   } 
 
 

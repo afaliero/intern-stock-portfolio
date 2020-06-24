@@ -31,8 +31,8 @@ export class StocksComponent implements OnInit {
   /** Updates the returns & rank of the stock array shown on webiste. */
   updateStockArray() {
     this.setReturns();
-    this.quicksort(this.stocks, 0, this.stocks.length - 1);
-    this.setRank();
+    this.quicksort(STOCKS, 0, STOCKS.length - 1);
+
   }
 
   /** Assign the % returns each stock has 
@@ -41,14 +41,9 @@ export class StocksComponent implements OnInit {
   setReturns() {
     for(var i = 0; i < STOCKS.length; i++) {
       this.stockApi.callApi(i);
-      console.log(i);
-      var x = STOCKS[i];
-      var res = (x.price - x.june15) / x.june15 * 100;
-      x.returns = this.round(res, 2);
     }
   }
 
-  /** This method will be used to sort the stocks by % returns. */
   quicksort(arr: Stock[], low: number, high: number) {
     if (low < high) {
       let pi: any = this.partate(arr, low, high);
@@ -75,13 +70,6 @@ export class StocksComponent implements OnInit {
     return (i + 1);
   }
 
-  /** Sets rank icon on the left of each stock container based
-   * on its index in the sorted stock array list. Call quicksort before this.
-   */
-  setRank() {
-    this.stocks.forEach(element => element.rank 
-      = (this.stocks.indexOf(element) + 1));
-  }
 
   round(value, precision) {
     var multiplier = Math.pow(10, precision || 0);
