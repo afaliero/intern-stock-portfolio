@@ -1,4 +1,5 @@
 import { Stock } from './stock';
+import { StockDataService} from './stock-data.service';
 
 export var STOCKS: Stock[] = [
   {ticker: 'SQ',
@@ -128,3 +129,4 @@ export var STOCKS: Stock[] = [
   peRatio: 0
   }
 ];
+

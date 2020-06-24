@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { StockDataService } from './stock-data.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,10 @@ export class AppComponent {
   title = 'Intern Stock Picks';
   subtitle = 'RCG Summer Intern Portfolio 2020';
   authors = 'Anna Faliero and Sara Abdali';
+
+  constructor() {
+    new StockDataService();
+  }
 
   }
   
