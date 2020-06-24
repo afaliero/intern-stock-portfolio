@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StocksComponent } from './stocks/stocks.component';
 import { StockInfoComponent } from './stock-info/stock-info.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { StockDataService } from './stock-data.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     BrowserAnimationsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [StockDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

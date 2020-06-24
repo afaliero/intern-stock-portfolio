@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Stock } from '../stock';
 import { STOCKS } from '../portfolio-stocks';
+import { StockDataService } from '../stock-data.service';
 
 @Component({
   selector: 'app-stocks',
@@ -15,10 +16,11 @@ export class StocksComponent implements OnInit {
   stocks = STOCKS;
   selectedStock: Stock;
 
-  constructor() {
-    this.updateStockArray();
+  constructor(private stockApi: StockDataService) {
    }
+
   ngOnInit(): void {
+    console.log(this.stockApi.callApi());
   }
   onSelect(stock: Stock): void {
     this.selectedStock = stock;
