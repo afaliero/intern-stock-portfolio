@@ -2,20 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { Stock } from '../stock';
 import { STOCKS } from '../portfolio-stocks';
 
-
-
 @Component({
   selector: 'app-stocks',
   templateUrl: './stocks.component.html',
   styleUrls: ['./stocks.component.css']
 })
+
+/** This class deals with the ordered list of stocks in 
+ * the intern portfolio (plus any the user adds).
+ */
 export class StocksComponent implements OnInit {
   stocks = STOCKS;
   selectedStock: Stock;
 
   constructor() {
-    this.setRank();
-    this.quicksort(this.stocks, 0, this.stocks.length - 1);
+    this.updateStockArray();
    }
   ngOnInit(): void {
   }
@@ -23,18 +24,22 @@ export class StocksComponent implements OnInit {
     this.selectedStock = stock;
   }
 
-  setRank() {
+  /** Updates the returns & rank of the stock array shown on webiste. */
+  updateStockArray() {
+    this.setReturns();
+    this.quicksort(this.stocks, 0, this.stocks.length - 1);
+    this.setRank();
+  }
+
+  /** Assign the % returns each stock has 
+   * using its current price and its price EOD June 15, 2020. 
+   */
+  setReturns() {
     for(var i = 0; i < this.stocks.length; i++) {
       var x = this.stocks[i];
-      x.rank = i + 1;
       var res = (x.price - x.june15) / x.june15 * 100;
       x.returns = this.round(res, 2);
     }
-  }
-
-  round(value, precision) {
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(value * multiplier) / multiplier;
   }
 
   /** This method will be used to sort the stocks by % returns. */
@@ -64,5 +69,17 @@ export class StocksComponent implements OnInit {
     return (i + 1);
   }
 
+  /** Sets rank icon on the left of each stock container based
+   * on its index in the sorted stock array list. Call quicksort before this.
+   */
+  setRank() {
+    this.stocks.forEach(element => element.rank 
+      = (this.stocks.indexOf(element) + 1));
+  }
+
+  round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+  }
 
 }

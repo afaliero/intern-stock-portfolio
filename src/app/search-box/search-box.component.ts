@@ -25,7 +25,7 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
       marketCap: 0,
       peRatio: 0,
     })
-    this.setRank();
+    this.updateStockArray();
     console.log(value);
   } 
 
