@@ -21,7 +21,7 @@ export var STOCKS: Stock[] = [
   peRatio: 0
   },
   {ticker: 'LUV',
-  price: 35.01,
+  price: 0,
   company: 'Southwest Airlines Co.',
   rank: 0,
   returns: 0,
@@ -30,7 +30,7 @@ export var STOCKS: Stock[] = [
   peRatio: 0
   },
   {ticker: 'LAUR',
-  price: 20.04,
+  price: 0,
   company: 'Laureate Education Inc.',
   rank: 3,
   returns: 0,
@@ -39,7 +39,7 @@ export var STOCKS: Stock[] = [
   peRatio: 0
   },
   {ticker: 'OMC',
-  price: 100.53,
+  price: 0,
   company: 'Omnicom Group Inc.',
   rank: 3,
   returns: 0,
