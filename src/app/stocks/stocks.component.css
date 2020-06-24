@@ -49,3 +49,8 @@ border-radius: 4px 0 0 4px;
 .stockContainer {
   position: relative;
 }
+.infoCard {
+  position: absolute;
+  right: 75px;
+  top: 33%;
+}

@@ -38,7 +38,7 @@ export var STOCKS: Stock[] = [
   peRatio: 0
   },
   {ticker: 'OMC',
-  price: 0,
+  price: 100.53,
   company: 'Omnicom Group Inc.',
   rank: 3,
   returns: 0,

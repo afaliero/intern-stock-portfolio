@@ -4,12 +4,11 @@
   <li *ngFor="let stock of stocks"
   [class.selected]="stock === selectedStock"
     (click)="onSelect(stock)">
-
   <ng-template [ngIf]="stock.returns >= 0 ">  <span class="rank">{{stock.rank}} </span> <span style="color:green;">${{stock.price}} +{{stock.returns}}% {{stock.ticker}} </span></ng-template>
   <ng-template [ngIf]="stock.returns <  0 ">  <span class="rank">{{stock.rank}} </span> <span style="color:#C63535;">${{stock.price}} {{stock.returns}}% {{stock.ticker}} </span></ng-template>
-
-  </li>
+</li>
+<div class="infoCard">
+  <app-stock-info [stock]="selectedStock"></app-stock-info>
+  </div>
 </ul>
 </div>
-
-<app-stock-info [stock]="selectedStock"></app-stock-info>
