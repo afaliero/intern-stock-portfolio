@@ -19,10 +19,6 @@ export class StockDataService {
         var res = (temp.price - temp.june15) / temp.june15 * 100;
         temp.returns = this.round(res, 2);
       })
-      if (index == STOCKS.length - 1){
-        console.log("im here");
-        STOCKS.sort((a,b) => (b.returns - a.returns));
-      }
     }
 
     round(value, precision) {
