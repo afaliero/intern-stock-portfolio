@@ -14,7 +14,7 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addTodo(value: string) {    
+  addTodo(value: string) {
     STOCKS.push({
       ticker: value,
       price: 0,
@@ -25,7 +25,7 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
       peRatio: 0,
     })
     this.updateStockArray();
-  } 
+  }
 
 
 }

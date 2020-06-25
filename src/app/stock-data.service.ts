@@ -21,10 +21,15 @@ export class StockDataService {
         temp.returns = this.round(res, 2);
 
       })
-      if (index == STOCKS.length - 1){
-        console.log("im here");
-        STOCKS.sort((a,b) => (b.returns - a.returns));
-      }
+      finnhubClient.companyProfile2({'symbol': STOCKS[index].ticker}, (error, data, response) => {
+        console.log(data);
+        STOCKS[index].marketCap = data.marketCapitalization / 1000;
+        STOCKS[index].marketCap = this.round(STOCKS[index].marketCap, 2);
+      })
+      // if (index == STOCKS.length - 1){
+      //   console.log("im here");
+      //   STOCKS.sort((a,b) => (b.returns - a.returns));
+      // }
     }
 
     round(value, precision) {
