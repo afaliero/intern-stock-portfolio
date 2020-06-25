@@ -6,111 +6,97 @@ export var STOCKS: Stock[] = [
   company: 'Square Inc.',
   returns: 0,
   june15: 91.00,
-  marketCap: 45.95,
-  peRatio: 157
+  marketCap: 45.95
   },
   {ticker: 'V',
   price: 0,
   company: 'Visa Inc.',
   returns: 0,
   june15: 191.76,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'LUV',
   price: 0,
   company: 'Southwest Airlines Co.',
   returns: 0,
   june15: 36.34,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'LAUR',
   price: 0,
   company: 'Laureate Education Inc.',
   returns: 0,
   june15: 10.15,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'OMC',
   price: 0,
   company: 'Omnicom Group Inc.',
   returns: 0,
   june15: 56.32,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'AAPL',
   price: 0,
   company: 'Apple Inc.',
   returns: 0,
   june15: 342.99,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'CAKE',
   price: 0,
   company: 'The Cheesecake Factory Inc.',
   returns: 0,
   june15: 25.13,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'ABC',
   price: 0,
   company: 'AmerisourceBergen Corp.',
   returns: 0,
   june15: 96.21,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'PANW',
   price: 0,
   company: 'Palo Alto Networks Inc.',
   returns: 0,
   june15: 226.30,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'RVLV',
   price: 0,
   company: 'Revolve Group LLC.',
   returns: 0,
   june15: 15.32,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'ZM',
   price: 0,
   company: 'Zoom Video Communications Inc.',
   returns: 0,
   june15: 239.02,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'W',
   price: 0,
   company: 'Wayfair Inc.',
   returns: 0,
   june15: 193.19,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'SPOT',
   price: 0,
   company: 'Spotify Technology S.A.',
   returns: 0,
   june15: 187.88,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   },
   {ticker: 'XSPA',
   price: 0,
   company: 'XpresSpa Group, Inc.',
   returns: 0,
   june15: 5.50,
-  marketCap: 0,
-  peRatio: 0
+  marketCap: 0
   }
 ];

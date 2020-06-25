@@ -5,6 +5,4 @@ export class Stock {
   returns: number;
   june15: number;
   marketCap: number;
-  peRatio: number
-
 }

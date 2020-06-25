@@ -20,16 +20,10 @@ export class StockDataService {
         var temp = STOCKS[index];
         var res = (temp.price - temp.june15) / temp.june15 * 100;
         temp.returns = this.round(res, 2);
-<<<<<<< HEAD
-        };
-      })
-      finnhubClient.companyProfile2({'symbol': STOCKS[index].ticker}, (error, data, response) => {
-=======
-
+        }
       })
       finnhubClient.companyProfile2({'symbol': STOCKS[index].ticker}, (error, data, response) => {
         console.log(data);
->>>>>>> 5d4f17b91d4589c765c6d75be814b2336bf7c641
         STOCKS[index].marketCap = data.marketCapitalization / 1000;
         STOCKS[index].marketCap = this.round(STOCKS[index].marketCap, 2);
       })
@@ -43,11 +37,4 @@ export class StockDataService {
       var multiplier = Math.pow(10, precision || 0);
       return Math.round(value * multiplier) / multiplier;
     }
-<<<<<<< HEAD
-
-
-
-  
-=======
->>>>>>> 5d4f17b91d4589c765c6d75be814b2336bf7c641
 }
