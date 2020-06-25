@@ -16,8 +16,13 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
    // STOCKS.sort((a, b) => (a.returns > b.returns)? 1 : -1);
   }
 
+<<<<<<< HEAD
   addTodo(value: string) {    
     var len = STOCKS.push({
+=======
+  addTodo(value: string) {
+    STOCKS.push({
+>>>>>>> 5d4f17b91d4589c765c6d75be814b2336bf7c641
       ticker: value,
       price: 0,
       company: "X",
@@ -26,9 +31,14 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
       marketCap: 0,
       peRatio: 0,
     })
+<<<<<<< HEAD
     var stockApi = new StockDataService;
     stockApi.callApi(len - 1);
   } 
+=======
+    this.updateStockArray();
+  }
+>>>>>>> 5d4f17b91d4589c765c6d75be814b2336bf7c641
 
 
 }

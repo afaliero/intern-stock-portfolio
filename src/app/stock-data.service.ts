@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Stock } from './stock';
 import { STOCKS } from './portfolio-stocks';
 import * as finnhub from 'finnhub';
 
@@ -19,20 +20,34 @@ export class StockDataService {
         var temp = STOCKS[index];
         var res = (temp.price - temp.june15) / temp.june15 * 100;
         temp.returns = this.round(res, 2);
+<<<<<<< HEAD
         };
       })
       finnhubClient.companyProfile2({'symbol': STOCKS[index].ticker}, (error, data, response) => {
+=======
+
+      })
+      finnhubClient.companyProfile2({'symbol': STOCKS[index].ticker}, (error, data, response) => {
+        console.log(data);
+>>>>>>> 5d4f17b91d4589c765c6d75be814b2336bf7c641
         STOCKS[index].marketCap = data.marketCapitalization / 1000;
         STOCKS[index].marketCap = this.round(STOCKS[index].marketCap, 2);
       })
+      // if (index == STOCKS.length - 1){
+      //   console.log("im here");
+      //   STOCKS.sort((a,b) => (b.returns - a.returns));
+      // }
     }
 
     round(value, precision) {
       var multiplier = Math.pow(10, precision || 0);
       return Math.round(value * multiplier) / multiplier;
     }
+<<<<<<< HEAD
 
 
 
   
+=======
+>>>>>>> 5d4f17b91d4589c765c6d75be814b2336bf7c641
 }
