@@ -9,7 +9,6 @@ const finnhubClient = new finnhub.DefaultApi();
 @Injectable()
 export class StockDataService {
 
-    stockCopy: any = [];
     constructor() {
     }
 
@@ -19,7 +18,7 @@ export class StockDataService {
         var temp = STOCKS[index];
         var res = (temp.price - temp.june15) / temp.june15 * 100;
         temp.returns = this.round(res, 2);
-        this.stockCopy.push(temp);
+        console.log(1);
       })
     }
 

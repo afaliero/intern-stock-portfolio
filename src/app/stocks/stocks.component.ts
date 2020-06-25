@@ -30,7 +30,7 @@ export class StocksComponent implements OnInit {
   /** Updates the returns & rank of the stock array shown on webiste. */
   updateStockArray() {
     this.setReturns();
-    this.quicksort(this.stockApi.stockCopy, 0, this.stockApi.stockCopy.length - 1);
+    //this.quicksort(this.stocks, 0, this.stocks.length - 1);
   }
 
   /** Assign the % returns each stock has 
@@ -39,6 +39,7 @@ export class StocksComponent implements OnInit {
   setReturns() {
     for(var i = 0; i < STOCKS.length; i++) {
       this.stockApi.callApi(i);
+      console.log(STOCKS)
     }
   }
 
