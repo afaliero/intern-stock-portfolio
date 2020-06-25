@@ -5,6 +5,5 @@ export interface Stock {
   returns: number,
   june15: number,
   marketCap: number,
-  peRatio: number
-
+  logo:string
 }

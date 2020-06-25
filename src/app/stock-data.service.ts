@@ -25,6 +25,7 @@ export class StockDataService {
         console.log(data);
         STOCKS[index].marketCap = data.marketCapitalization / 1000;
         STOCKS[index].marketCap = this.round(STOCKS[index].marketCap, 2);
+        STOCKS[index].logo = data.logo;
       })
       // if (index == STOCKS.length - 1){
       //   console.log("im here");

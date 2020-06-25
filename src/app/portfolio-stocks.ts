@@ -7,7 +7,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 91.00,
   marketCap: 45.95,
-  peRatio: 157
+  logo:''
   },
   {ticker: 'V',
   price: 0,
@@ -15,7 +15,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 191.76,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'LUV',
   price: 0,
@@ -23,7 +23,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 36.34,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'LAUR',
   price: 0,
@@ -31,7 +31,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 10.15,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'OMC',
   price: 0,
@@ -39,7 +39,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 56.32,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'AAPL',
   price: 0,
@@ -47,7 +47,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 342.99,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'CAKE',
   price: 0,
@@ -55,7 +55,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 25.13,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'ABC',
   price: 0,
@@ -63,7 +63,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 96.21,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'PANW',
   price: 0,
@@ -71,7 +71,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 226.30,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'RVLV',
   price: 0,
@@ -79,7 +79,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 15.32,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'ZM',
   price: 0,
@@ -87,7 +87,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 239.02,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'W',
   price: 0,
@@ -95,7 +95,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 193.19,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'SPOT',
   price: 0,
@@ -103,7 +103,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 187.88,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   },
   {ticker: 'XSPA',
   price: 0,
@@ -111,6 +111,6 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 5.50,
   marketCap: 0,
-  peRatio: 0
+  logo:''
   }
 ];

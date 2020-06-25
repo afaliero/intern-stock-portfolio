@@ -22,7 +22,7 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
       returns: 0,
       june15: 100000,
       marketCap: 0,
-      peRatio: 0,
+      logo: ''
     })
     this.updateStockArray();
   }
