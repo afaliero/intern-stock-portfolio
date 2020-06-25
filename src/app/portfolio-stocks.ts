@@ -103,7 +103,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 187.88,
   marketCap: 0,
-  logo:''
+  logo: '../assets/spotifylogo.png'
   },
   {ticker: 'XSPA',
   price: 0,
