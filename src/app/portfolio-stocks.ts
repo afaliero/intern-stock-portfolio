@@ -114,5 +114,3 @@ export var STOCKS: Stock[] = [
   peRatio: 0
   }
 ];
-
-

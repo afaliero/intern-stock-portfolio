@@ -15,7 +15,7 @@ position: relative;
 left: 0;
 background-color: #E1E3E6;
 margin: .5em;
-padding: .3em 0;
+padding: .1em 0;
 height: 1.6em;
 border-radius: 4px;
 }
@@ -36,15 +36,17 @@ color: white;
 display: inline-block;
 font-size: small;
 padding: 0.4em 0.7em 0 0.7em;
-background-color:#5E7E9C;
+background-color:#727278;
 color: white;
 line-height: 1em;
 position: relative;
 left: -1px;
 top: -4px;
-height: 1.9em;
+height: 2.0em;
+width: 2.5em;
 margin-right: .8em;
 border-radius: 4px 0 0 4px;
+text-align: center;
 }
 .stockContainer {
   position: relative;

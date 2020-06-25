@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Stock } from './stock';
 import { STOCKS } from './portfolio-stocks';
 import * as finnhub from 'finnhub';
 
@@ -18,14 +19,16 @@ export class StockDataService {
         var temp = STOCKS[index];
         var res = (temp.price - temp.june15) / temp.june15 * 100;
         temp.returns = this.round(res, 2);
-        console.log(1);
+
       })
+      if (index == STOCKS.length - 1){
+        console.log("im here");
+        STOCKS.sort((a,b) => (b.returns - a.returns));
+      }
     }
 
     round(value, precision) {
       var multiplier = Math.pow(10, precision || 0);
       return Math.round(value * multiplier) / multiplier;
     }
-
-  
 }

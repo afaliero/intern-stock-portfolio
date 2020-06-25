@@ -1,6 +1,6 @@
-<div *ngIf="stock">
+<div *ngIf="stock" style="color:white;">
 
-  <ng-template [ngIf]= "stock.returns >= 0"> 
+  <ng-template [ngIf]= "stock.returns >= 0">
     <div class="background" style="background-color:rgba(0, 255, 0, 0.5)">
     <div class="info">
       <h2 style="color:white;">{{stock.company}}</h2>
@@ -14,7 +14,7 @@
     </div>
     </div>
     </ng-template>
- 
+
  <ng-template [ngIf]= "stock.returns < 0">
     <div class="background" style="background-color: rgba(255, 0, 0, 0.5)">
    <div class="info">
