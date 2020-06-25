@@ -13,6 +13,7 @@ import { StockDataService } from '../stock-data.service';
 export class SearchBoxComponent extends StocksComponent implements OnInit {
 
   ngOnInit(): void {
+   // STOCKS.sort((a, b) => (a.returns > b.returns)? 1 : -1);
   }
 
   addTodo(value: string) {    

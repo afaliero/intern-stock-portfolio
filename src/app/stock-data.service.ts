@@ -19,7 +19,11 @@ export class StockDataService {
         var temp = STOCKS[index];
         var res = (temp.price - temp.june15) / temp.june15 * 100;
         temp.returns = this.round(res, 2);
-        }
+        };
+      })
+      finnhubClient.companyProfile2({'symbol': STOCKS[index].ticker}, (error, data, response) => {
+        STOCKS[index].marketCap = data.marketCapitalization / 1000;
+        STOCKS[index].marketCap = this.round(STOCKS[index].marketCap, 2);
       })
     }
 
