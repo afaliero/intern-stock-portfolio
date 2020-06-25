@@ -17,7 +17,6 @@ export class StocksComponent implements OnInit {
   selectedStock: Stock;
 
   constructor(private stockApi: StockDataService) {
-    
    }
 
   ngOnInit(): void {
