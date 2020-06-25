@@ -1,6 +1,6 @@
 import { Stock } from './stock';
 
-export var STOCKS: Stock[] = [
+export const STOCKS: Stock[] = [
   {ticker: 'SQ',
   price: 0,
   company: 'Square Inc.',

@@ -17,8 +17,12 @@ export class StocksComponent implements OnInit {
   selectedStock: Stock;
 
   constructor(private stockApi: StockDataService) {
-   }
-  sync
+
+    stockApi.data.subscribe(x => {
+      this.stocks = STOCKS.sort((a, b) => (a.returns < b.returns) ? 1 : -1);
+    });
+  }
+  
   ngOnInit(): void {
     STOCKS.sort((a, b) => (a.returns < b.returns)? 1 : -1)
     this.updateStockArray();
@@ -39,9 +43,7 @@ export class StocksComponent implements OnInit {
    * using its current price and its price EOD June 15, 2020.
    */
   setReturns() {
-    for(var i = 0; i < STOCKS.length; i++) {
-      this.stockApi.callApi(i);
-    }
+    STOCKS.forEach(x => this.stockApi.callApi(x));
   }
 
   quicksort(arr: Stock[], low: number, high: number) {
