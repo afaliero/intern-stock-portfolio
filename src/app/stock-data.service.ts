@@ -15,9 +15,11 @@ export class StockDataService {
     callApi(index: number): void {
       finnhubClient.quote(STOCKS[index].ticker, (error, data, response) => {
         STOCKS[index].price = (data.c).toFixed(2);
+        if (index < 14) {
         var temp = STOCKS[index];
         var res = (temp.price - temp.june15) / temp.june15 * 100;
         temp.returns = this.round(res, 2);
+        }
       })
     }
 
