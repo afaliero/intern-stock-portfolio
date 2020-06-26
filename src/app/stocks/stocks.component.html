@@ -4,9 +4,9 @@
   <li *ngFor="let stock of stocks"
   [class.selected]="stock === selectedStock"
     (click)="onSelect(stock)">
-  <ng-template [ngIf]="stock.returns < -95"> <span class="rank"> -- </span><span style="color:navy;">${{stock.price}} N/A {{stock.ticker}} </span></ng-template>
+  <ng-template [ngIf]="stock.returns < -95"> <span class="rank"> -- </span><span style="color:navy;">${{stock.price}} {{stock.ticker}} </span></ng-template>
   <ng-template [ngIf]="stock.returns >= 0 ">  <span class="rank">{{stocks.indexOf(stock) + 1}} </span> <span style="color:green;">${{stock.price}} +{{stock.returns}}% {{stock.ticker}} </span></ng-template>
-  <ng-template [ngIf]="stock.returns <  0 ">  <span class="rank">{{stocks.indexOf(stock) + 1}} </span> <span style="color:#C63535;">${{stock.price}} {{stock.returns}}% {{stock.ticker}} </span></ng-template>
+  <ng-template [ngIf]="stock.returns <  0 && stock.returns > -95">  <span class="rank">{{stocks.indexOf(stock) + 1}} </span> <span style="color:#C63535;">${{stock.price}} {{stock.returns}}% {{stock.ticker}} </span></ng-template>
 </li>
 <div class="infoCard">
   <app-stock-info [stock]="selectedStock"></app-stock-info>
