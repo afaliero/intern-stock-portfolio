@@ -24,6 +24,7 @@ export class SearchBoxComponent implements OnInit {
       exchange: '',
       marketCap: 0,
       company: '',
+      dailyReturns: 0,
       logo: '',
     })
     this.stockApi.callApiNew(NEW_STOCKS[len - 1]);
