@@ -1,10 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { STOCKS } from '../portfolio-stocks';
-import { StocksComponent } from '../stocks/stocks.component';
 import { StockDataService } from '../stock-data.service';
-import { Stock } from '../stock';
+import { NEW_STOCKS} from '../new-portfolio';
 
-export var EXTRA_STOCKS: Stock[] = [];
 @Component({
   selector: 'app-search-box',
   templateUrl: './search-box.component.html',
@@ -12,6 +9,7 @@ export var EXTRA_STOCKS: Stock[] = [];
 })
 
 export class SearchBoxComponent implements OnInit {
+  newStocks = NEW_STOCKS;
 
   ngOnInit(): void {
   }
@@ -21,16 +19,15 @@ export class SearchBoxComponent implements OnInit {
   }
 
   addTodo(value: string) {    
-    var len = EXTRA_STOCKS.push({
+    var len = this.newStocks.push({
       ticker: value,
       price: 0,
       company: value,
-      returns: -100,
-      june15: 100000,
+      dailyReturns: 100000,
       marketCap: 0,
       logo: null,
     })
-    this.stockApi.callApi(EXTRA_STOCKS[len - 1]);
+    this.stockApi.callApiNew(this.newStocks[len - 1]);
   } 
 
 

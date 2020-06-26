@@ -24,58 +24,18 @@ export class StocksComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateStockArray();
-
   }
 
   onSelect(stock: Stock): void {
     this.selectedStock = stock;
   }
 
-  /** Updates the returns & rank of the stock array shown on webiste. */
-  updateStockArray() {
-    this.setReturns();
-    console.log(STOCKS);
-  }
-
   /** Assign the % returns each stock has
    * using its current price and its price EOD June 15, 2020.
    */
-  setReturns() {
+  updateStockArray() {
     for(var i = 0; i < STOCKS.length; i++) {
       this.stockApi.callApi(STOCKS[i]);
     }
   }
-
-  quicksort(arr: Stock[], low: number, high: number) {
-    if (low < high) {
-      let pi: any = this.partate(arr, low, high);
-      this.quicksort(arr, low, pi - 1);
-      this.quicksort(arr, pi + 1, high);
-    }
-  }
-
-  partate(arr: Stock[], low: number, high: number) {
-    let pivot: number = arr[high].returns;
-    let i: number = (low - 1);
-
-    for (let j = low; j <= high - 1; j++) {
-      if (arr[j].returns >= pivot) {
-        i++;
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-      }
-    }
-    let tempN = arr[high];
-    arr[high] = arr[i + 1];
-    arr[i + 1] = tempN;
-    return (i + 1);
-  }
-
-
-  round(value, precision) {
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(value * multiplier) / multiplier;
-  }
-
 }
