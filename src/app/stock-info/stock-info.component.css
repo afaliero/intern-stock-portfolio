@@ -1,9 +1,10 @@
 .background {
     padding: 20px;
     border-radius: 4px;
-    width: 300pt;
+    width: 250pt;
     text-align: left;
     right: 75px;
+    position: right;
   }
 .background.info{
     color: white;
