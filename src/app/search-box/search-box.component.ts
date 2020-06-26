@@ -19,7 +19,7 @@ export class SearchBoxComponent implements OnInit {
 
   addTodo(value: string) {    
     var len = NEW_STOCKS.push({
-      ticker: value,
+      ticker: value.toUpperCase(),
       price: 0,
       exchange: '',
       marketCap: 0,

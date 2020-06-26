@@ -1,0 +1,64 @@
+h2 {
+    padding-top: 1em;
+    text-align: center;
+    color: white;
+  }
+  .stocks{
+  margin: 1em 0 0em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+  
+  }
+  .stocks li {
+  cursor: pointer;
+  position: relative;
+  right: 10%;
+  background-color: #E1E3E6;
+  margin: .5em;
+  padding: .1em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  right: 30%;
+  }
+  .stocks li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  right: 30%;
+  }
+  .stocks li.selected {
+  background-color: #CFD8DC;
+  color: white;
+  right: 30%;
+  }
+  .stocks li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+  right: 30%;
+  }
+  .stocks .rank {
+  display: inline-block;
+  font-size: small;
+  padding: 0.4em 0.7em 0 0.7em;
+  background-color:#727278;
+  color: white;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 2.0em;
+  width: 2.5em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+  text-align: center;
+  }
+  .stockContainer {
+    position: relative;
+    right: 30%;
+  }
+  .infoCard {
+    position: absolute;
+    left: 50%;
+    top: 33%;
+  }
+  

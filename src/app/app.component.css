@@ -23,7 +23,6 @@ h2 {
     padding-bottom: 1em;
 }
 body {
-    align-items: center;
     margin: auto;
     background-color: transparent;
     padding-top: 1em;
@@ -33,3 +32,4 @@ body {
 input:focus {
     outline: white;
 }
+
