@@ -28,6 +28,10 @@ export class SearchBoxComponent implements OnInit {
       logo: '',
     })
     this.stockApi.callApiNew(NEW_STOCKS[len - 1]);
+    if (NEW_STOCKS[0] == null) {
+      NEW_STOCKS.shift();
+      console.log(NEW_STOCKS.length);
+    }
   } 
 
 

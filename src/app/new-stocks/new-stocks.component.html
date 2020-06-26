@@ -3,7 +3,7 @@
     <ul class="stocks">
       <li *ngFor="let stock of newStocks"
       [class.selected]="stock === selectedStock"
-        (click)="onSelect(stock)">
+        (click)="onSelect(stock)" (click)="deleteFirst()">
         <ng-template [ngIf]="stock != null"> <span class="rank">{{newStocks.indexOf(stock) + 1}} </span> <span style="color:navy;">${{stock.price}} {{stock.ticker}} </span></ng-template>
     </li>
     </ul>

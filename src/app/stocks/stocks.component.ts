@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Stock } from '../stock';
 import { STOCKS } from '../portfolio-stocks';
 import { StockDataService } from '../stock-data.service';
+import { NEW_STOCKS } from '../new-portfolio';
 
 @Component({
   selector: 'app-stocks',
@@ -19,6 +20,9 @@ export class StocksComponent implements OnInit {
   constructor(private stockApi: StockDataService) {
     stockApi.subject.subscribe(x => {
       this.stocks = STOCKS.sort((a, b) => (a.returns < b.returns) ? 1 : -1);
+      if (NEW_STOCKS[0] == null) {
+        NEW_STOCKS.shift();
+      }
     });
    }
 
