@@ -28,7 +28,6 @@ export class SearchBoxComponent implements OnInit {
       logo: '',
     })
     this.stockApi.callApiNew(NEW_STOCKS[len - 1]);
-    console.log(NEW_STOCKS[len - 1]);
   } 
 
 
