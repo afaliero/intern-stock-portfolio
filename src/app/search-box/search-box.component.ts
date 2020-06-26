@@ -9,7 +9,6 @@ import { NEW_STOCKS} from '../new-portfolio';
 })
 
 export class SearchBoxComponent implements OnInit {
-  newStocks = NEW_STOCKS;
 
   ngOnInit(): void {
   }
@@ -19,15 +18,16 @@ export class SearchBoxComponent implements OnInit {
   }
 
   addTodo(value: string) {    
-    var len = this.newStocks.push({
+    var len = NEW_STOCKS.push({
       ticker: value,
       price: 0,
-      company: value,
-      dailyReturns: 100000,
+      exchange: '',
       marketCap: 0,
-      logo: null,
+      company: '',
+      logo: '',
     })
-    this.stockApi.callApiNew(this.newStocks[len - 1]);
+    this.stockApi.callApiNew(NEW_STOCKS[len - 1]);
+    console.log(NEW_STOCKS[len - 1]);
   } 
 
 

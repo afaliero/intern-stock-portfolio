@@ -24,7 +24,9 @@ export class StockDataService {
       stock.price = (data.c).toFixed(2);
       finnhubClient.companyProfile2({'symbol': stock.ticker}, (error, data, response) => {
         stock.marketCap = data.marketCapitalization / 1000;
-        stock.marketCap = this.round(stock.marketCap, 2);
+        stock.marketCap =  this.round(stock.marketCap, 2);
+        stock.company = data.name;
+        stock.exchange = data.exchange;
         if (stock.logo == '')
           stock.logo = data.logo;
       });
