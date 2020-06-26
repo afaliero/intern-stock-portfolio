@@ -1,8 +1,8 @@
 export interface NewStock {
     ticker: string,
     price: number,
-    company: string,
-    dailyReturns: number,
+    exchange: string;
     marketCap: number,
+    company: string,
     logo:string
   }

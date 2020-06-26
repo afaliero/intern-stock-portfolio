@@ -4,7 +4,7 @@
       <li *ngFor="let stock of newStocks"
       [class.selected]="stock === selectedStock"
         (click)="onSelect(stock)">
-    <span class="rank">{{stocks.indexOf(stock) + 1}} </span> <span style="color:black;">${{stock.price}} ''+{{stock.exchange}}''% {{stock.ticker}} </span>
+        <ng-template [ngIf]="stock.price > 0 "> <span class="rank">{{newStocks.indexOf(stock) + 1}} </span> <span style="color:navy;">${{stock.price}} {{stock.ticker}} </span></ng-template>
     </li>
     </ul>
     </div>

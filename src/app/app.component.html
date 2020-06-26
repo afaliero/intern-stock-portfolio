@@ -6,10 +6,16 @@
     <h1>{{title}}</h1>
     <h2>{{subtitle}}</h2>
             <body>
-                <app-search-box></app-search-box>
-                 <app-stocks></app-stocks>
-                 <app-new-stocks></app-new-stocks>
-         </body>
+                <div class="row">
+                    <div class="column">
+                        <app-new-stocks></app-new-stocks>
+                    </div>
+                <div class="column">
+                        <app-search-box></app-search-box>
+                        <app-stocks></app-stocks>
+                    </div>
+                </div>
+             </body>
         </div>
     </div>
 </html>
