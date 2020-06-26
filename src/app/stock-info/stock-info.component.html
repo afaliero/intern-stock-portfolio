@@ -3,8 +3,8 @@
   <ng-template [ngIf]= "stock.returns >= 0">
     <div class="background" style="background-color:rgba(0, 255, 0, 0.5)">
     <div class="info">
-      <h2 style="color:white;">{{stock.company}}</h2>
-      <img src={{stock.logo}} width="50" height="50">
+      <h2 style="color:white;">{{stock.company}}<div class="logo"> <img src={{stock.logo}} width="50"> </div></h2>
+
      <div><span>Price: </span>${{stock.price}}</div>
      <div><span>Total Gain: </span>{{stock.returns}}%</div>
      <div><span>Company: </span>{{stock.company}}</div>
@@ -18,8 +18,7 @@
  <ng-template [ngIf]= "stock.returns < 0">
     <div class="background" style="background-color: rgba(255, 0, 0, 0.5)">
    <div class="info">
-     <h2 style="color:white;">{{stock.company}}</h2>
-     <img src={{stock.logo}} width="50" height="50">
+     <h2 style="color:white;">{{stock.company}}<div class="logo"> <img src={{stock.logo}} width="50"></div></h2>
     <div><span>Price: </span>${{stock.price}}</div>
     <div><span>Total Loss: </span>{{stock.returns}}%</div>
     <div><span>Company: </span>{{stock.company}}</div>

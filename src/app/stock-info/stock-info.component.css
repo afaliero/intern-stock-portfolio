@@ -1,10 +1,13 @@
 .background {
     padding: 20px;
     border-radius: 4px;
-    width: 300pt;
+    width: 450pt;
     text-align: left;
-    position: relative; 
+    position: relative;
   }
-  .background.info{
+.background.info{
     color: white;
   }
+.logo{
+  float:right;
+}

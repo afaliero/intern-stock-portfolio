@@ -23,7 +23,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 36.34,
   marketCap: 0,
-  logo:''
+  logo:'../assets/luv.png'
   },
   {ticker: 'LAUR',
   price: 0,
@@ -63,7 +63,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 96.21,
   marketCap: 0,
-  logo:''
+  logo:'../assets/ABC.png'
   },
   {ticker: 'PANW',
   price: 0,
@@ -71,7 +71,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 226.30,
   marketCap: 0,
-  logo:''
+  logo:'../assets/PAN.png'
   },
   {ticker: 'RVLV',
   price: 0,
@@ -79,7 +79,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 15.32,
   marketCap: 0,
-  logo:''
+  logo:'../assets/revolve.jpeg'
   },
   {ticker: 'ZM',
   price: 0,
@@ -103,7 +103,7 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 187.88,
   marketCap: 0,
-  logo: '../assets/spotifylogo.png'
+  logo: '../assets/Spotifylogo.png'
   },
   {ticker: 'XSPA',
   price: 0,
@@ -111,6 +111,6 @@ export var STOCKS: Stock[] = [
   returns: 0,
   june15: 5.50,
   marketCap: 0,
-  logo:''
+  logo:'../assets/xspa.png'
   }
 ];

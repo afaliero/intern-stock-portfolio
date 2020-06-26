@@ -5,7 +5,7 @@ import * as finnhub from 'finnhub';
 import { Subject } from 'rxjs';
 
 const api_key = finnhub.ApiClient.instance.authentications['api_key'];
-api_key.apiKey = "brpnqgvrh5rbpquqal90";
+api_key.apiKey = "brp3olnrh5rdpcujeupg";
 const finnhubClient = new finnhub.DefaultApi();
 
 @Injectable()
