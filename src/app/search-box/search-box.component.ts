@@ -10,15 +10,18 @@ import { StockDataService } from '../stock-data.service';
   styleUrls: ['./search-box.component.css']
 })
 
-export class SearchBoxComponent extends StocksComponent implements OnInit {
+export class SearchBoxComponent implements OnInit {
+
+  constructor(private stockApi: StockDataService) {
+
+  }
 
   ngOnInit(): void {
-   // STOCKS.sort((a, b) => (a.returns > b.returns)? 1 : -1);
   }
 
   addTodo(value: string) {
     var len = STOCKS.push({
-      ticker: value,
+      ticker: value.toUpperCase(),
       price: 0,
       company: "X",
       returns: -100,
@@ -26,8 +29,8 @@ export class SearchBoxComponent extends StocksComponent implements OnInit {
       marketCap: 0,
       logo: ''
     })
-    //var stockApi = new StockDataService;
-    //stockApi.callApi(len - 1);
+    this.stockApi.callApi(STOCKS[len - 1]);
+    STOCKS[len - 1].returns = -100;
   }
 
 
