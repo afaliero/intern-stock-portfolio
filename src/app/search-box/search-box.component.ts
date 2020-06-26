@@ -23,7 +23,7 @@ export class SearchBoxComponent implements OnInit {
     var len = STOCKS.push({
       ticker: value.toUpperCase(),
       price: 0,
-      company: "X",
+      company: "N/A",
       returns: -100,
       june15: 100000,
       marketCap: 0,
