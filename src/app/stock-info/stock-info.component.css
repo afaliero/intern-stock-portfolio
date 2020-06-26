@@ -5,6 +5,7 @@
     text-align: left;
     right: 75px;
     position: right;
+    display:inline-block;
   }
 .background.info{
     color: white;

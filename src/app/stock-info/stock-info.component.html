@@ -15,12 +15,11 @@
     </div>
     </ng-template>
 
- <ng-template [ngIf]= "stock.returns < 0">
-    <div class="background" style="background-color: rgba(255, 0, 0, 0.5)">
+ <ng-template [ngIf]= "stock.returns < -95">
+    <div class="background" style="background-color: navy">
    <div class="info">
      <h2 style="color:white;">{{stock.company}}</h2>
     <div><span>Price: </span>${{stock.price}}</div>
-    <div><span>Total Loss: </span>{{stock.returns}}%</div>
     <div><span>Company: </span>{{stock.company}}</div>
     <div><span>Market Cap: </span>{{stock.marketCap}}B</div>
     <div> <a href="https://finance.yahoo.com/quote/{{stock.ticker}}">Find more information here</a>
@@ -28,4 +27,18 @@
  </div>
  </div>
   </ng-template>
+
+ <ng-template [ngIf]= "stock.returns < 0 && stock.returns > -95">
+  <div class="background" style="background-color: rgba(255, 0, 0, 0.5)">
+ <div class="info">
+   <h2 style="color:white;">{{stock.company}}</h2>
+  <div><span>Price: </span>${{stock.price}}</div>
+  <div><span>Total Loss: </span>{{stock.returns}}%</div>
+  <div><span>Company: </span>{{stock.company}}</div>
+  <div><span>Market Cap: </span>{{stock.marketCap}}B</div>
+  <div> <a href="https://finance.yahoo.com/quote/{{stock.ticker}}">Find more information here</a>
  </div>
+</div>
+</div>
+</ng-template>
+</div>
