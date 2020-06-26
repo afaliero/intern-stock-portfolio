@@ -8,6 +8,7 @@ margin: 0 0 0em 0;
 list-style-type: none;
 padding: 0;
 width: 15em;
+left: 100px;
 }
 .stocks li {
 cursor: pointer;
