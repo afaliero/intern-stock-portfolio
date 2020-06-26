@@ -20,9 +20,9 @@ export class StocksComponent implements OnInit {
   constructor(private stockApi: StockDataService) {
     stockApi.subject.subscribe(x => {
       this.stocks = STOCKS.sort((a, b) => (a.returns < b.returns) ? 1 : -1);
-      if (NEW_STOCKS[0] == null) {
-        NEW_STOCKS.shift();
-      }
+          if (NEW_STOCKS[0] == null) {
+      NEW_STOCKS.shift();
+    }
     });
    }
 

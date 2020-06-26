@@ -15,11 +15,7 @@ export class NewStocksComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  deleteFirst() {
-    if (NEW_STOCKS[0] == null) {
-      NEW_STOCKS.shift();
-    }
-  }
+
 
   onSelect(stock: NewStock): void {
     this.selectedStock = stock;
