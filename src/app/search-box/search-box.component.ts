@@ -17,7 +17,7 @@ export class SearchBoxComponent implements OnInit {
 
   }
 
-  addTodo(value: string) {    
+  addTodo(value: string) { 
     var len = NEW_STOCKS.push({
       ticker: value.toUpperCase(),
       price: 0,
@@ -28,10 +28,6 @@ export class SearchBoxComponent implements OnInit {
       logo: '',
     })
     this.stockApi.callApiNew(NEW_STOCKS[len - 1]);
-    if (NEW_STOCKS[0] == null) {
-      NEW_STOCKS.shift();
-      console.log(NEW_STOCKS.length);
-    }
   } 
 
 
