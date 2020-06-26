@@ -1,0 +1,15 @@
+<div class=".stockContainer">
+    <div class="container"> <form>  <div class="form-group">
+    <ul class="stocks">
+      <li *ngFor="let stock of extras"
+      [class.selected]="stock === selectedStock"
+        (click)="onSelect(stock)">
+      <ng-template [ngIf]="stock.returns >= 0 ">  <span class="rank">{{extras.indexOf(stock) + 1}} </span> <span style="color:green;">${{stock.price}} +{{stock.returns}}% {{stock.ticker}} </span></ng-template>
+      <ng-template [ngIf]="stock.returns <  0 ">  <span class="rank">{{extras.indexOf(stock) + 1}} </span> <span style="color:#C63535;">${{stock.price}} {{stock.returns}}% {{stock.ticker}} </span></ng-template>
+    </li>
+    <div class="infoCard">
+      <app-stock-info [stock]="selectedStock"></app-stock-info>
+      </div>
+    </ul>
+    </div>
+    

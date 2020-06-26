@@ -29,18 +29,12 @@ export class StocksComponent implements OnInit {
     this.selectedStock = stock;
   }
 
-  /** Updates the returns & rank of the stock array shown on webiste. */
-  updateStockArray() {
-    this.setReturns();
-    //this.quicksort(this.stocks, 0, this.stocks.length - 1);
-  }
-
   /** Assign the % returns each stock has
    * using its current price and its price EOD June 15, 2020.
    */
-  setReturns() {
+  updateStockArray() {
     for(var i = 0; i < STOCKS.length; i++) {
-      this.stockApi.callApi(i);
+      this.stockApi.callApi(STOCKS, i);
     }
   }
 

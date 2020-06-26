@@ -13,24 +13,19 @@ export class StockDataService {
     constructor() {
     }
 
-    callApi(index: number): void {
-      finnhubClient.quote(STOCKS[index].ticker, (error, data, response) => {
-        STOCKS[index].price = (data.c).toFixed(2);
+    callApi(sArr: Stock[], index: number): void {
+      finnhubClient.quote(sArr[index].ticker, (error, data, response) => {
+        sArr[index].price = (data.c).toFixed(2);
         if (index < 14) {
-        var temp = STOCKS[index];
+        var temp = sArr[index];
         var res = (temp.price - temp.june15) / temp.june15 * 100;
         temp.returns = this.round(res, 2);
         }
       })
-      finnhubClient.companyProfile2({'symbol': STOCKS[index].ticker}, (error, data, response) => {
-        console.log(data);
-        STOCKS[index].marketCap = data.marketCapitalization / 1000;
-        STOCKS[index].marketCap = this.round(STOCKS[index].marketCap, 2);
+      finnhubClient.companyProfile2({'symbol': sArr[index].ticker}, (error, data, response) => {
+        sArr[index].marketCap = data.marketCapitalization / 1000;
+        sArr[index].marketCap = this.round(sArr[index].marketCap, 2);
       })
-      // if (index == STOCKS.length - 1){
-      //   console.log("im here");
-      //   STOCKS.sort((a,b) => (b.returns - a.returns));
-      // }
     }
 
     round(value, precision) {

@@ -8,6 +8,7 @@ import { StocksComponent } from './stocks/stocks.component';
 import { StockInfoComponent } from './stock-info/stock-info.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { StockDataService } from './stock-data.service';
+import { ExtraStocksComponent } from './extra-stocks/extra-stocks.component';
 
 @NgModule({
 
@@ -15,7 +16,8 @@ import { StockDataService } from './stock-data.service';
     AppComponent,
     StocksComponent,
     StockInfoComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    ExtraStocksComponent
   ],
   imports: [
     BrowserModule,
