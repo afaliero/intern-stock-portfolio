@@ -1,6 +1,7 @@
 # InternProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
+Final product: http://rcg-impact-intern-project.s3-website-us-east-1.amazonaws.com/
 
 ## Development server
 
